@@ -270,6 +270,24 @@ IGenericRepository <|.. GenericRepository
 
 # 🧠 Conceitos de POO Aplicados
 
+## Encapsulamento
+
+Os atributos das entidades são protegidos e acessados através de propriedades e DTOs.
+
+## Herança
+
+A classe abstrata `SpaceEquipment` é utilizada como base para `Satellite` e `BiotelemetryTag`.
+
+## Polimorfismo
+
+O método `TransmitDiagnostic()` possui comportamentos distintos para cada equipamento.
+
+## Abstração
+
+A classe base define comportamentos comuns enquanto as subclasses implementam suas particularidades.
+
+---
+
 # 📐 Princípios SOLID Aplicados
 
 ### Single Responsibility Principle (SRP)
@@ -291,22 +309,6 @@ Interfaces específicas evitam dependências desnecessárias.
 ### Dependency Inversion Principle (DIP)
 
 A aplicação depende de abstrações através de interfaces e injeção de dependência.
-
-## Encapsulamento
-
-Os atributos das entidades são protegidos e acessados através de propriedades e DTOs.
-
-## Herança
-
-A classe abstrata `SpaceEquipment` é utilizada como base para `Satellite` e `BiotelemetryTag`.
-
-## Polimorfismo
-
-O método `TransmitDiagnostic()` possui comportamentos distintos para cada equipamento.
-
-## Abstração
-
-A classe base define comportamentos comuns enquanto as subclasses implementam suas particularidades.
 
 ---
 
@@ -342,6 +344,17 @@ builder.Services.AddHttpClient();
 
 # 📦 DTOs
 
+
+| DTO | Tipo |
+|---------|---------|
+| TelemetryDTO | Request |
+| SatelliteDTO | Request |
+| BiotelemetryTagDTO | Request |
+| SpaceEquipmentDTO | Request/Response |
+| PredictionResponseDTO | Response |
+
+---
+
 # 🔄 AutoMapper
 
 A aplicação utiliza AutoMapper para realizar o mapeamento entre DTOs e entidades de domínio.
@@ -356,14 +369,6 @@ A aplicação utiliza AutoMapper para realizar o mapeamento entre DTOs e entidad
 - Conversão automática entre objetos
 - Maior organização das camadas da aplicação
 - Melhor manutenção do código
-
-| DTO | Tipo |
-|---------|---------|
-| TelemetryDTO | Request |
-| SatelliteDTO | Request |
-| BiotelemetryTagDTO | Request |
-| SpaceEquipmentDTO | Request/Response |
-| PredictionResponseDTO | Response |
 
 ---
 
