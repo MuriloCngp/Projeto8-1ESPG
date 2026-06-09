@@ -24,16 +24,6 @@
 Sistema distribuído desenvolvido para monitoramento ambiental através de biotelemetria, satélites de baixa órbita (LEO), Machine Learning e análise preditiva em tempo real.
 </p>
 
-<h1 align="center">🛰️ Space Telemetry</h1>
-
-<p align="center">
-<b>Monitoramento Inteligente de Fauna por Telemetria Espacial e Inteligência Artificial</b>
-</p>
-
-<p align="center">
-Sistema distribuído desenvolvido para monitoramento ambiental através de biotelemetria, satélites de baixa órbita (LEO), Machine Learning e análise preditiva em tempo real.
-</p>
-
 ---
 
 # 👥 Integrantes
