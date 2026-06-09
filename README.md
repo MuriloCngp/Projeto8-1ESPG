@@ -548,11 +548,15 @@ Adicionar capturas de tela de:
 
 # 🎥 Demonstração
 
-### Vídeo do Projeto
+<p align="center">
+  <a href="https://youtu.be/5G9euYeWuxI" target="_blank">
+    <img src="https://img.youtube.com/vi/5G9euYeWuxI/maxresdefault.jpg" alt="Vídeo Demonstração Space Telemetry" width="800">
+  </a>
+</p>
 
-https://youtu.be/5G9euYeWuxI
-
----
+<p align="center">
+  ▶️ Clique na imagem para assistir à demonstração completa do projeto
+</p>
 
 # 🚀 Evoluções Futuras
 
