@@ -1,3 +1,5 @@
+<img src="https://raw.githubusercontent.com/AnaTorresLoureiro/legendary-doodle/refs/heads/main/Design%20sem%20nome%20(1).png"/>
+
 <p align="center">
 
 <img src="https://img.shields.io/badge/Global%20Solution-2026-4ea8de?style=for-the-badge&labelColor=0d0f14"/>
@@ -22,15 +24,26 @@
 Sistema distribuído desenvolvido para monitoramento ambiental através de biotelemetria, satélites de baixa órbita (LEO), Machine Learning e análise preditiva em tempo real.
 </p>
 
+<h1 align="center">🛰️ Space Telemetry</h1>
+
+<p align="center">
+<b>Monitoramento Inteligente de Fauna por Telemetria Espacial e Inteligência Artificial</b>
+</p>
+
+<p align="center">
+Sistema distribuído desenvolvido para monitoramento ambiental através de biotelemetria, satélites de baixa órbita (LEO), Machine Learning e análise preditiva em tempo real.
+</p>
+
 ---
 
 # 👥 Integrantes
 
 | Nome | RM |
 |--------|--------|
-| Nome Completo | XXXXXXX |
-| Nome Completo | XXXXXXX |
-| Nome Completo | XXXXXXX |
+| Ana Laura Torres Loureiro | RM554375 |
+| Murilo Cordeiro Ferreira | RM556727 |
+| Geronimo Augusto Nascimento Santos | RM557170 |
+| Ianny Raquel Ferreira De Souza | RM559096 |
 
 ---
 
