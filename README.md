@@ -62,6 +62,27 @@ Todas as análises são armazenadas em SQL Server, permitindo rastreabilidade, a
 - Aplicação dos pilares da POO
 - Integração ASP.NET Core + Python
 
+# 🏛️ Aplicação dos Conceitos de SOA
+
+O projeto foi desenvolvido seguindo os princípios da Arquitetura Orientada a Serviços (SOA), permitindo a separação de responsabilidades entre os componentes da solução.
+
+## Serviços Identificados
+
+| Serviço | Responsabilidade |
+|----------|----------------|
+| Telemetry API | Receber dados de telemetria |
+| Telemetry Service | Processar regras de negócio |
+| Machine Learning API | Realizar análises preditivas |
+| Persistence Layer | Armazenar históricos e resultados |
+
+## Benefícios Obtidos
+
+- Baixo acoplamento
+- Facilidade de manutenção
+- Escalabilidade
+- Reutilização de serviços
+- Independência tecnológica
+
 ---
 
 # 🎯 Objetivos
@@ -243,13 +264,33 @@ IGenericRepository <|.. GenericRepository
 
 - Python
 - FastAPI
-- Isolation Forest
-- LSTM
-- XGBoost
+- Modelo de Machine Learning para análise preditiva
 
 ---
 
 # 🧠 Conceitos de POO Aplicados
+
+# 📐 Princípios SOLID Aplicados
+
+### Single Responsibility Principle (SRP)
+
+Cada classe possui uma única responsabilidade dentro da aplicação.
+
+### Open Closed Principle (OCP)
+
+Os serviços podem ser estendidos sem necessidade de modificar implementações existentes.
+
+### Liskov Substitution Principle (LSP)
+
+As implementações respeitam os contratos definidos pelas interfaces.
+
+### Interface Segregation Principle (ISP)
+
+Interfaces específicas evitam dependências desnecessárias.
+
+### Dependency Inversion Principle (DIP)
+
+A aplicação depende de abstrações através de interfaces e injeção de dependência.
 
 ## Encapsulamento
 
@@ -301,6 +342,21 @@ builder.Services.AddHttpClient();
 
 # 📦 DTOs
 
+# 🔄 AutoMapper
+
+A aplicação utiliza AutoMapper para realizar o mapeamento entre DTOs e entidades de domínio.
+
+### Perfil Configurado
+
+- TelemetryProfile
+
+### Benefícios
+
+- Redução de código repetitivo
+- Conversão automática entre objetos
+- Maior organização das camadas da aplicação
+- Melhor manutenção do código
+
 | DTO | Tipo |
 |---------|---------|
 | TelemetryDTO | Request |
@@ -311,7 +367,34 @@ builder.Services.AddHttpClient();
 
 ---
 
-# 🗄️ Estrutura do Banco
+# 🗄️ Estrutura do Banco de Dados
+
+## PredictionHistory
+
+Tabela responsável por armazenar todas as análises realizadas pelo sistema.
+
+| Campo | Descrição |
+|---------|---------|
+| Id | Identificador |
+| SpeciesId | Espécie monitorada |
+| Latitude | Coordenada geográfica |
+| Longitude | Coordenada geográfica |
+| Probability | Probabilidade da anomalia |
+| AlertLevel | Nível do alerta |
+| AnalysisDate | Data da análise |
+
+## SpaceEquipment
+
+Tabela base utilizada para representar os equipamentos monitorados.
+
+### Tipos derivados
+
+- Satellite
+- BiotelemetryTag
+
+Estratégia utilizada:
+
+- TPH (Table Per Hierarchy)
 
 ## PredictionHistory
 
@@ -335,6 +418,20 @@ Tabela base contendo:
 Utilizando estratégia TPH (Table Per Hierarchy).
 
 ---
+
+# ✔️ Validação de Dados
+
+Antes do processamento das análises, a aplicação realiza validações dos dados recebidos.
+
+### Validações Aplicadas
+
+- Campos obrigatórios
+- Coordenadas geográficas válidas
+- Identificação da espécie
+- Dados numéricos consistentes
+- Estrutura correta dos DTOs
+
+Essas validações garantem maior confiabilidade e integridade das informações processadas.
 
 # 🛡️ Tratamento de Exceções
 
