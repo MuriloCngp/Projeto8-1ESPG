@@ -1,380 +1,475 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/Global%20Solution-2026-4ea8de?style=for-the-badge&labelColor=0d0f14" />
-  <img src="https://img.shields.io/badge/ASP.NET%20Core-C%23-63d4a8?style=for-the-badge&labelColor=0d0f14" />
-  <img src="https://img.shields.io/badge/Python-FastAPI-c49af5?style=for-the-badge&labelColor=0d0f14" />
-  <img src="https://img.shields.io/badge/SQL%20Server-Entity%20Framework-f5a623?style=for-the-badge&labelColor=0d0f14" />
+
+<img src="https://img.shields.io/badge/Global%20Solution-2026-4ea8de?style=for-the-badge&labelColor=0d0f14"/>
+
+<img src="https://img.shields.io/badge/.NET%208-ASP.NET%20Core-512BD4?style=for-the-badge&logo=dotnet&logoColor=white"/>
+
+<img src="https://img.shields.io/badge/Python-FastAPI-009688?style=for-the-badge&logo=python&logoColor=white"/>
+
+<img src="https://img.shields.io/badge/SQL%20Server-Database-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white"/>
+
+<img src="https://img.shields.io/badge/Status-Concluído-success?style=for-the-badge"/>
+
 </p>
 
-<h1 align="center">🛰️ Space Telemetry — Monitoramento de Fauna</h1>
+<h1 align="center">🛰️ Space Telemetry</h1>
 
 <p align="center">
-  <b>Unindo telemetria espacial e inteligência artificial na proteção da biodiversidade</b><br/>
-  Identificação precoce de alterações comportamentais em espécies monitoradas via biotelemetria e satélites LEO.
+<b>Monitoramento Inteligente de Fauna por Telemetria Espacial e Inteligência Artificial</b>
+</p>
+
+<p align="center">
+Sistema distribuído desenvolvido para monitoramento ambiental através de biotelemetria, satélites de baixa órbita (LEO), Machine Learning e análise preditiva em tempo real.
 </p>
 
 ---
 
-## 👥 Integrantes
+# 👥 Integrantes
 
 | Nome | RM |
-|------|-----|
+|--------|--------|
 | Nome Completo | XXXXXXX |
 | Nome Completo | XXXXXXX |
 | Nome Completo | XXXXXXX |
 
 ---
 
-## 📖 Sobre o Projeto
+# 🌎 Sobre o Projeto
 
-O **Space Telemetry** é um sistema distribuído desenvolvido para auxiliar pesquisadores e órgãos ambientais na identificação precoce de alterações comportamentais em espécies monitoradas.
+O **Space Telemetry** é uma solução criada para auxiliar pesquisadores, órgãos ambientais e instituições científicas na preservação da biodiversidade.
 
-Dispositivos de biotelemetria acoplados aos animais transmitem dados fisiológicos e geográficos contínuos para satélites de baixa órbita (LEO). Esses dados chegam a uma API ASP.NET Core que os repassa a um serviço de Machine Learning em Python — responsável por detectar anomalias e prever eventos ambientais de risco. Os resultados ficam persistidos no SQL Server para rastreabilidade, histórico e suporte à tomada de decisão.
+A proposta utiliza dispositivos de biotelemetria instalados em animais monitorados que transmitem informações fisiológicas e geográficas para satélites de baixa órbita (LEO).
 
-A arquitetura foi construída sobre princípios de SOA, WebServices, Programação Orientada a Objetos e Repository Pattern, com cada camada tendo responsabilidade única e se comunicando via interfaces bem definidas.
+Os dados são processados por uma API ASP.NET Core integrada a um serviço de Machine Learning desenvolvido em Python, capaz de detectar anomalias comportamentais e prever possíveis eventos ambientais de risco.
 
----
-
-## 🎯 Objetivos
-
-- Centralizar dados de telemetria animal em tempo real
-- Detectar padrões comportamentais anômalos via Machine Learning
-- Gerar alertas preventivos antes que eventos críticos ocorram
-- Disponibilizar histórico de análises para pesquisa e tomada de decisão
+Todas as análises são armazenadas em SQL Server, permitindo rastreabilidade, auditoria e histórico completo das ocorrências.
 
 ---
 
-## 🏗️ Arquitetura da Solução
+# ⭐ Diferenciais
 
-```
-┌─────────────────────────────────────────────────────────────────────┐
-│                         COLETA DE DADOS                             │
-│                                                                     │
-│   [ BiotelemetryTag ]  ────────────►  [ LEO Satellite ]            │
-│     frequência cardíaca                  transmissão                │
-│     aceleração · GPS                     de baixa órbita            │
-└─────────────────────────────────┬───────────────────────────────────┘
-                                  │ dados brutos
-                                  ▼
-┌─────────────────────────────────────────────────────────────────────┐
-│                        API  ASP.NET CORE                            │
-│                                                                     │
-│   TelemetryController  ──►  TelemetryPredictionService             │
-│                                       │                             │
-│                                       ├──────────────────────────┐  │
-│                                       ▼                          │  │
-│                             PredictionRepository                 │  │
-└───────────────────────────────────────┼──────────────────────────┼──┘
-                                        │                          │
-                    POST /predict        │                          │ salvar
-                                        ▼                          ▼
-┌──────────────────────────┐   ┌────────────────────────────────────┐
-│    ML SERVICE (Python)   │   │          SQL SERVER                │
-│                          │   │                                    │
-│  FastAPI  ──►  modelos   │   │  PredictionHistory                 │
-│                          │   │  SpaceEquipment                    │
-│  · Isolation Forest      │   │  Satellite · BiotelemetryTag       │
-│  · LSTM                  │   │                                    │
-│  · XGBoost               │   └────────────────────────────────────┘
-└──────────────────────────┘
-          │ resultado
-          ▼
-   [ Consumer Apps ]
-     REST · Swagger
-```
+- Arquitetura baseada em SOA (Service Oriented Architecture)
+- Comunicação entre microsserviços via REST
+- Machine Learning para detecção de anomalias
+- Persistência de histórico para auditoria
+- Repository Pattern
+- Injeção de Dependência
+- DTOs para desacoplamento
+- Tratamento centralizado de exceções
+- Aplicação dos pilares da POO
+- Integração ASP.NET Core + Python
 
 ---
 
-## 🔄 Fluxo Operacional
+# 🎯 Objetivos
 
-```
-  [ BiotelemetryTag ]
-          │
-          │  sinal de biotelemetria
-          ▼
-  [ LEO Satellite ]
-          │
-          │  dados coletados
-          ▼
-  [ TelemetryController ]
-          │
-          │  solicitação de predição
-          ▼
-  [ TelemetryPredictionService ]
-          │
-          ├─────────────────────────────────────┐
-          │  POST /predict                      │  salvar histórico
-          ▼                                     ▼
-  [ Python ML API ]                      [ SQL Server ]
-          │
-          │  resultado da análise
-          ▼
-    ┌─────────────┐
-    │  Anomalia?  │
-    └──────┬──────┘
-           │
-     ┌─────┴─────┐
-     │ sim       │ não
-     ▼           ▼
- [ Alerta ]  [ Normal ]
-     │           │
-     └─────┬─────┘
-           │
-           ▼
-  [ Persistência + REST API ]
+| Objetivo | Descrição |
+|-----------|-----------|
+| 🛰️ Monitoramento | Receber dados de telemetria em tempo real |
+| 🤖 Inteligência Artificial | Detectar comportamentos anômalos |
+| 🚨 Alertas Preventivos | Antecipar eventos ambientais críticos |
+| 📊 Histórico | Armazenar análises para pesquisas futuras |
+| 🌎 Sustentabilidade | Apoiar ações de preservação da biodiversidade |
+
+---
+
+# 🏗️ Arquitetura da Solução
+
+```mermaid
+flowchart LR
+
+A[Biotelemetry Tag]
+--> B[LEO Satellite]
+
+B --> C[ASP.NET Core API]
+
+C --> D[Telemetry Prediction Service]
+
+D --> E[Python ML API]
+
+D --> F[SQL Server]
+
+E --> D
+
+F --> G[Consumer Applications]
+
+G --> H[Swagger]
 ```
 
 ---
 
-## 🔁 Sequência de Chamadas
+# 🔄 Fluxo Operacional
 
-```
-BiotelemetryTag   Satellite    Controller   PredictionService   Python ML    Database
-      │               │             │               │               │            │
-      │─ telemetria ─►│             │               │               │            │
-      │               │─ dados ────►│               │               │            │
-      │               │             │─ predição ───►│               │            │
-      │               │             │               │─ POST/predict►│            │
-      │               │             │               │◄── resultado ─│            │
-      │               │             │               │─ histórico ──────────────►│
-      │               │             │               │◄────────────── confirmação─│
-      │               │             │◄── retorno ───│               │            │
-```
+```mermaid
+flowchart TD
 
----
+A[Biotelemetry Tag]
+--> B[LEO Satellite]
 
-## 🧩 Diagrama de Classes
+B --> C[Telemetry Controller]
 
-```
-                    ┌─────────────────────────┐
-                    │    «abstract»           │
-                    │     SpaceEquipment      │
-                    │─────────────────────────│
-                    │  + Id                   │
-                    │  + Name                 │
-                    │  + TransmitDiagnostic() │
-                    └────────────┬────────────┘
-                                 │
-               ┌─────────────────┴──────────────────┐
-               │                                    │
-               ▼                                    ▼
-  ┌────────────────────────┐          ┌─────────────────────────────┐
-  │       Satellite        │          │       BiotelemetryTag       │
-  │────────────────────────│          │─────────────────────────────│
-  │  + OrbitType           │          │  + SpeciesId                │
-  │  + AltitudeKm          │          │  + HeartRate                │
-  │  + TransmitDiagnostic()│          │  + Acceleration             │
-  └────────────────────────┘          │  + TransmitDiagnostic()     │
-                                      └──────────────┬──────────────┘
-                                                     │
-                                                     ▼
-                                      ┌─────────────────────────────┐
-                                      │      PredictionHistory      │
-                                      │─────────────────────────────│
-                                      │  + SpeciesId                │
-                                      │  + Probability              │
-                                      │  + AlertLevel               │
-                                      │  + AnalysisDate             │
-                                      └─────────────────────────────┘
+C --> D[Telemetry Prediction Service]
 
+D --> E[Python ML API]
 
-  ┌──────────────────────────────────┐     ┌──────────────────────────────────┐
-  │  «interface»                     │     │  «interface»                     │
-  │  ITelemetryPredictionService     │     │  IGenericRepository<T>           │
-  └────────────────┬─────────────────┘     └─────────────────┬────────────────┘
-                   │ implements                               │ implements
-                   ▼                                          ▼
-  ┌──────────────────────────────────┐     ┌──────────────────────────────────┐
-  │   TelemetryPredictionService     │────►│       GenericRepository<T>       │
-  └──────────────────────────────────┘     └──────────────────────────────────┘
+E --> F{Anomalia Detectada?}
+
+F -->|Sim| G[Gerar Alerta]
+
+F -->|Não| H[Registrar Normalidade]
+
+G --> I[Salvar Histórico]
+
+H --> I
+
+I --> J[Disponibilizar via REST API]
 ```
 
 ---
 
-## 🚀 Tecnologias Utilizadas
+# 🔁 Sequência de Comunicação
+
+```mermaid
+sequenceDiagram
+
+participant Tag
+participant Satellite
+participant API
+participant Service
+participant Python
+participant Database
+
+Tag->>Satellite: Dados de Telemetria
+
+Satellite->>API: Dados coletados
+
+API->>Service: Solicitação de análise
+
+Service->>Python: POST /predict
+
+Python-->>Service: Resultado
+
+Service->>Database: Salvar histórico
+
+Database-->>Service: Confirmação
+
+Service-->>API: Retorno
+
+API-->>Satellite: Resposta
+```
+
+---
+
+# 🧩 Diagrama de Classes
+
+```mermaid
+classDiagram
+
+class SpaceEquipment {
+    <<abstract>>
+    +Id
+    +Name
+    +TransmitDiagnostic()
+}
+
+class Satellite {
+    +OrbitType
+    +AltitudeKm
+}
+
+class BiotelemetryTag {
+    +SpeciesId
+    +HeartRate
+    +Acceleration
+}
+
+class PredictionHistory {
+    +SpeciesId
+    +Probability
+    +AlertLevel
+    +AnalysisDate
+}
+
+SpaceEquipment <|-- Satellite
+SpaceEquipment <|-- BiotelemetryTag
+
+class ITelemetryPredictionService
+
+class TelemetryPredictionService
+
+class IGenericRepository~T~
+
+class GenericRepository~T~
+
+ITelemetryPredictionService <|.. TelemetryPredictionService
+IGenericRepository <|.. GenericRepository
+```
+
+---
+
+# 🛠 Stack Tecnológica
+
+| Camada | Tecnologia |
+|----------|------------|
+| Backend | ASP.NET Core 8 |
+| Linguagem Principal | C# |
+| Machine Learning | Python |
+| Framework IA | FastAPI |
+| Banco de Dados | SQL Server |
+| ORM | Entity Framework Core |
+| Documentação | Swagger |
+| Arquitetura | SOA |
+| Padrões | Repository Pattern, DTO, Dependency Injection |
+
+---
+
+# 🚀 Tecnologias Utilizadas
 
 ### Backend
 
-[![ASP.NET Core](https://img.shields.io/badge/ASP.NET_Core-512BD4?style=for-the-badge&logo=dotnet&logoColor=white&labelColor=0d0f14)](https://dotnet.microsoft.com)
-[![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white&labelColor=0d0f14)](https://learn.microsoft.com/dotnet/csharp)
-[![Swagger](https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=swagger&logoColor=black&labelColor=0d0f14)](https://swagger.io)
+- ASP.NET Core 8
+- C#
+- Swagger/OpenAPI
 
 ### Banco de Dados
 
-[![SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white&labelColor=0d0f14)](https://www.microsoft.com/sql-server)
-[![Entity Framework](https://img.shields.io/badge/Entity_Framework_Core-512BD4?style=for-the-badge&logo=dotnet&logoColor=white&labelColor=0d0f14)](https://learn.microsoft.com/ef)
+- SQL Server
+- Entity Framework Core
 
-### Machine Learning
+### Inteligência Artificial
 
-[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white&labelColor=0d0f14)](https://python.org)
-[![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white&labelColor=0d0f14)](https://fastapi.tiangolo.com)
-
-> Modelos: Isolation Forest · LSTM · XGBoost
-
----
-
-## 🧠 Conceitos de POO Aplicados
-
-**Encapsulamento** — atributos das entidades protegidos, expostos apenas via propriedades e DTOs.
-
-**Herança** — `SpaceEquipment` é a classe base abstrata; `Satellite` e `BiotelemetryTag` herdam e estendem seu comportamento.
-
-**Polimorfismo** — `TransmitDiagnostic()` é implementado de forma distinta em cada equipamento, preservando a mesma assinatura.
-
-**Abstração** — `SpaceEquipment` define o contrato comum; os detalhes de cada tipo ficam encapsulados nas subclasses.
+- Python
+- FastAPI
+- Isolation Forest
+- LSTM
+- XGBoost
 
 ---
 
-## 🔌 Interfaces
+# 🧠 Conceitos de POO Aplicados
 
-- `IGenericRepository<T>` — operações de persistência (CRUD genérico)
-- `ITelemetryPredictionService` — processamento e orquestração das predições
+## Encapsulamento
+
+Os atributos das entidades são protegidos e acessados através de propriedades e DTOs.
+
+## Herança
+
+A classe abstrata `SpaceEquipment` é utilizada como base para `Satellite` e `BiotelemetryTag`.
+
+## Polimorfismo
+
+O método `TransmitDiagnostic()` possui comportamentos distintos para cada equipamento.
+
+## Abstração
+
+A classe base define comportamentos comuns enquanto as subclasses implementam suas particularidades.
 
 ---
 
-## 💉 Injeção de Dependência
+# 🔌 Interfaces
 
-Registrada via container nativo do ASP.NET Core:
+### IGenericRepository<T>
+
+Responsável pelas operações genéricas de persistência.
+
+### ITelemetryPredictionService
+
+Responsável pela comunicação com o serviço de Machine Learning e gerenciamento das análises.
+
+---
+
+# 💉 Injeção de Dependência
 
 ```csharp
-builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-builder.Services.AddScoped<ITelemetryPredictionService, TelemetryPredictionService>();
+builder.Services.AddScoped(
+    typeof(IGenericRepository<>),
+    typeof(GenericRepository<>)
+);
+
+builder.Services.AddScoped<
+    ITelemetryPredictionService,
+    TelemetryPredictionService
+>();
+
 builder.Services.AddHttpClient();
 ```
 
 ---
 
-## 📦 DTOs
+# 📦 DTOs
 
-| DTO | Direção |
-|-----|---------|
-| `TelemetryDTO` | Request |
-| `BiotelemetryTagDTO` | Request |
-| `SatelliteDTO` | Request |
-| `SpaceEquipmentDTO` | Request / Response |
-| `PredictionResponseDTO` | Response |
-
----
-
-## 🗄️ Banco de Dados
-
-**`PredictionHistory`** — armazena espécie monitorada, coordenadas geográficas, frequência cardíaca, aceleração, tipo de anomalia, probabilidade, nível de alerta e data da análise.
-
-**`SpaceEquipment`** — tabela base (TPH) com discriminator para os subtipos `Satellite` e `BiotelemetryTag`.
+| DTO | Tipo |
+|---------|---------|
+| TelemetryDTO | Request |
+| SatelliteDTO | Request |
+| BiotelemetryTagDTO | Request |
+| SpaceEquipmentDTO | Request/Response |
+| PredictionResponseDTO | Response |
 
 ---
 
-## 🛡️ Tratamento de Exceções
+# 🗄️ Estrutura do Banco
 
-A exceção customizada `SpaceTelemetryException` centraliza o tratamento de falhas na API Python, erros de comunicação externa, falhas de processamento e exceções não mapeadas nas integrações.
+## PredictionHistory
+
+Armazena:
+
+- Espécie monitorada
+- Coordenadas geográficas
+- Frequência cardíaca
+- Aceleração
+- Probabilidade da anomalia
+- Tipo de alerta
+- Data da análise
+
+## SpaceEquipment
+
+Tabela base contendo:
+
+- Satellite
+- BiotelemetryTag
+
+Utilizando estratégia TPH (Table Per Hierarchy).
 
 ---
 
-## 🔗 Endpoints
+# 🛡️ Tratamento de Exceções
 
-### `POST /api/telemetry/predict`
+A exceção customizada:
 
-Recebe dados de biotelemetria e retorna uma predição com nível de alerta.
+```csharp
+SpaceTelemetryException
+```
+
+centraliza erros relacionados a:
+
+- Comunicação com API Python
+- Falhas de processamento
+- Erros de integração
+- Exceções não tratadas
+
+---
+
+# 🔗 Endpoints
+
+## POST /api/telemetry/predict
+
+Recebe dados de telemetria e retorna uma análise preditiva.
+
+### Exemplo
 
 ```json
 {
-  "speciesId":    "ANIMAL-001",
-  "latitude":     -23.5505,
-  "longitude":    -46.6333,
+  "speciesId": "ANIMAL-001",
+  "latitude": -23.5505,
+  "longitude": -46.6333,
   "acceleration": 8.5,
-  "heartRate":    120
+  "heartRate": 120
 }
 ```
 
-### `GET /api/telemetry/predictions`
+---
 
-Retorna o histórico completo de predições armazenadas no banco.
+## GET /api/telemetry/predictions
+
+Retorna o histórico completo de análises realizadas.
 
 ---
 
-## 📂 Estrutura do Projeto
+# 📂 Estrutura do Projeto
 
-```
-SpaceTelemetry/
-├── Controllers/
-│   └── TelemetryController.cs
-│
-├── Services/
-│   └── TelemetryPredictionService.cs
-│
-├── Repositories/
-│   └── GenericRepository.cs
-│
-├── Interfaces/
-│   ├── IGenericRepository.cs
-│   └── ITelemetryPredictionService.cs
-│
-├── Models/
-│   ├── SpaceEquipment.cs
-│   ├── Satellite.cs
-│   ├── BiotelemetryTag.cs
-│   ├── PredictionHistory.cs
-│   └── Telemetry.cs
-│
-├── DTOs/
-│   ├── RequestDTOs/
-│   └── ResponseDTOs/
-│
-├── Exceptions/
-│   └── SpaceTelemetryException.cs
-│
-├── Profiles/
-│   └── TelemetryProfile.cs
-│
-└── Data/
-    └── AppDbContext.cs
+```text
+📦 SpaceTelemetry
+├── 📂 Controllers
+├── 📂 Services
+├── 📂 Repositories
+├── 📂 Interfaces
+├── 📂 Models
+├── 📂 DTOs
+├── 📂 Data
+├── 📂 Profiles
+├── 📂 Exceptions
+├── 📂 Migrations
+└── 📂 Configurations
 ```
 
 ---
 
-## ▶️ Como Executar
+# ▶️ Como Executar
 
-**1. Clone o repositório**
+## 1. Clonar o projeto
+
 ```bash
 git clone URL_DO_REPOSITORIO
+```
+
+```bash
 cd SpaceTelemetry
 ```
 
-**2. Aplique as migrations**
+## 2. Aplicar migrations
+
 ```bash
 dotnet ef database update
 ```
 
-**3. Suba a aplicação**
+## 3. Executar aplicação
+
 ```bash
 dotnet run
 ```
 
-**4. Acesse o Swagger**
-```
+## 4. Acessar Swagger
+
+```text
 https://localhost:[porta]/swagger
 ```
 
-> [!NOTE]
-> Certifique-se de que o serviço Python de ML está em execução antes de realizar chamadas ao endpoint `/predict`.
+> Certifique-se de que o serviço Python esteja em execução antes de utilizar o endpoint `/predict`.
 
 ---
 
-## 📸 Evidências de Execução
+# 📸 Evidências
 
-> Adicionar prints de: Swagger em execução · endpoints testados · banco populado · comunicação com a API Python · retornos JSON
+Adicionar capturas de tela de:
 
----
-
-## 🎥 Demonstração
-
-[▶ Assistir no YouTube](https://youtu.be/5G9euYeWuxI)
-
----
-
-## ✅ Conclusão
-
-A solução demonstra a aplicação integrada de SOA, WebServices, Programação Orientada a Objetos e Machine Learning na construção de um sistema distribuído para monitoramento ambiental. A arquitetura proposta garante escalabilidade, rastreabilidade e processamento inteligente de dados — contribuindo para pesquisas ambientais e sistemas de alerta preventivo.
+- Swagger funcionando
+- Endpoint POST testado
+- Histórico retornado pelo GET
+- Banco populado
+- Comunicação com API Python
 
 ---
 
-<p align="center">FIAP · Global Solution 2026 · Engenharia de Software</p>
+# 🎥 Demonstração
+
+### Vídeo do Projeto
+
+https://youtu.be/5G9euYeWuxI
+
+---
+
+# 🚀 Evoluções Futuras
+
+- [ ] Dashboard Web
+- [ ] Notificações em tempo real
+- [ ] Aplicativo Mobile
+- [ ] Treinamento contínuo dos modelos
+- [ ] Integração com novos sensores
+- [ ] Painel de monitoramento geográfico
+
+---
+
+# 🌎 Impacto Ambiental
+
+O Space Telemetry demonstra como tecnologias espaciais, inteligência artificial e sistemas distribuídos podem ser utilizadas para auxiliar a preservação da biodiversidade.
+
+A solução permite monitoramento contínuo, identificação precoce de riscos ambientais e suporte à tomada de decisão por pesquisadores e órgãos ambientais.
+
+---
+
+<p align="center">
+
+<b>FIAP • Global Solution 2026 • Engenharia de Software</b>
+
+</p>
