@@ -273,53 +273,65 @@ public IActionResult ReceberTelemetria(TelemetriaDTO dto)
 
 # 📋 Evidências
 
-As evidências utilizadas para validação da implementação encontram-se na pasta:
+As evidências utilizadas para validação da implementação e comprovação dos controles de segurança encontram-se na pasta:
 
 ```text
 /evidencias
 ```
 
-## Evidência 1
+## Evidência 1 — Código da Implementação
 
-Código implementado no Controller.
+Demonstração do código-fonte responsável pelo registro de logs de auditoria na API ODDYSEY.
 
-Arquivo:
+**Arquivo:**
 
 ```text
 codigo/TelemetriaController.cs
 ```
 
-## Evidência 2
+**Objetivo:**
 
-API em execução.
+Comprovar a implementação prática do controle de monitoramento e auditoria através de logs.
 
-Print esperado:
+---
 
-```text
-Terminal executando o ASP.NET Core.
-```
+## Evidência 2 — API em Execução
 
-## Evidência 3
+Captura da API ASP.NET Core em funcionamento, processando requisições e retornando respostas corretamente.
 
-Logs registrados.
+**Objetivo:**
 
-Exemplo:
+Demonstrar o funcionamento operacional do backend e a disponibilidade do serviço.
 
-```text
-info: Nova telemetria recebida do sensor ESP32-001
+---
 
-info: Nova telemetria recebida do sensor ESP32-002
-```
+## Evidência 3 — Simulação do Projeto em Operação
 
-## Evidência 4
+Demonstração prática de como o ODDYSEY funcionaria em um cenário real, recebendo informações dos sensores ambientais, processando os dados, realizando análises e gerando alertas preventivos.
 
-Teste realizado via Postman.
+**Objetivo:**
 
-Resultado:
+Validar o fluxo completo da arquitetura proposta e demonstrar a aplicação dos controles de segurança definidos.
 
-```text
-HTTP 200 OK
-```
+---
+
+## Evidência 4 — Banco de Dados PostgreSQL
+
+Captura do banco PostgreSQL armazenando registros de telemetria, análises realizadas pela IA e informações processadas pela aplicação em tempo real.
+
+**Objetivo:**
+
+Comprovar a persistência dos dados e o correto funcionamento da camada de armazenamento.
+
+---
+
+## Evidência 5 — Logs de Auditoria
+
+Captura dos logs gerados pela aplicação durante sua execução, demonstrando o registro de eventos relevantes do sistema.
+
+**Objetivo:**
+
+Comprovar a implementação do mecanismo de monitoramento e auditoria, permitindo rastreabilidade, identificação de atividades e suporte à investigação de incidentes de segurança.
 
 ---
 
