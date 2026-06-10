@@ -1,4 +1,3 @@
-````markdown
 <img src="https://raw.githubusercontent.com/SEU-USUARIO/SEU-REPOSITORIO/main/banner-oddysey.png"/>
 
 <p align="center">
