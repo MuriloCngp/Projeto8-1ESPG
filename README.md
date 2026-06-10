@@ -1,27 +1,30 @@
-<img src="https://raw.githubusercontent.com/AnaTorresLoureiro/legendary-doodle/refs/heads/main/Design%20sem%20nome%20(1).png"/>
+````markdown
+<img src="https://raw.githubusercontent.com/SEU-USUARIO/SEU-REPOSITORIO/main/banner-oddysey.png"/>
 
 <p align="center">
 
 <img src="https://img.shields.io/badge/Global%20Solution-2026-4ea8de?style=for-the-badge&labelColor=0d0f14"/>
 
-<img src="https://img.shields.io/badge/.NET%208-ASP.NET%20Core-512BD4?style=for-the-badge&logo=dotnet&logoColor=white"/>
+<img src="https://img.shields.io/badge/Cybersecurity-FIAP-red?style=for-the-badge"/>
 
-<img src="https://img.shields.io/badge/Python-FastAPI-009688?style=for-the-badge&logo=python&logoColor=white"/>
+<img src="https://img.shields.io/badge/ASP.NET-Core%208-512BD4?style=for-the-badge&logo=dotnet&logoColor=white"/>
 
-<img src="https://img.shields.io/badge/SQL%20Server-Database-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white"/>
+<img src="https://img.shields.io/badge/PostgreSQL-Database-336791?style=for-the-badge&logo=postgresql&logoColor=white"/>
+
+<img src="https://img.shields.io/badge/ESP32-IoT-success?style=for-the-badge"/>
 
 <img src="https://img.shields.io/badge/Status-Concluído-success?style=for-the-badge"/>
 
 </p>
 
-<h1 align="center">🛰️ Space Telemetry</h1>
+<h1 align="center">🛰️ ODDYSEY</h1>
 
 <p align="center">
-<b>Monitoramento Inteligente de Fauna por Telemetria Espacial e Inteligência Artificial</b>
+<b>Plataforma Inteligente de Monitoramento Biológico, Ambiental e Espacial</b>
 </p>
 
 <p align="center">
-Sistema distribuído desenvolvido para monitoramento ambiental através de biotelemetria, satélites de baixa órbita (LEO), Machine Learning e análise preditiva em tempo real.
+Sistema desenvolvido para detecção preventiva de riscos ambientais utilizando Inteligência Artificial, Visão Computacional, Sensores IoT, Dados Satelitais e Monitoramento Comportamental de Canários.
 </p>
 
 ---
@@ -30,58 +33,30 @@ Sistema distribuído desenvolvido para monitoramento ambiental através de biote
 
 | Nome | RM |
 |--------|--------|
-| Ana Laura Torres Loureiro | RM554375 |
-| Murilo Cordeiro Ferreira | RM556727 |
-| Geronimo Augusto Nascimento Santos | RM557170 |
-| Ianny Raquel Ferreira De Souza | RM559096 |
+| Nome Integrante | RMXXXXX |
+| Nome Integrante | RMXXXXX |
+| Nome Integrante | RMXXXXX |
+| Nome Integrante | RMXXXXX |
 
 ---
 
 # 🌎 Sobre o Projeto
 
-O **Space Telemetry** é uma solução criada para auxiliar pesquisadores, órgãos ambientais e instituições científicas na preservação da biodiversidade.
+O ODDYSEY foi desenvolvido para antecipar riscos ambientais antes que sensores tradicionais detectem níveis críticos de contaminação.
 
-A proposta utiliza dispositivos de biotelemetria instalados em animais monitorados que transmitem informações fisiológicas e geográficas para satélites de baixa órbita (LEO).
+A solução combina:
 
-Os dados são processados por uma API ASP.NET Core integrada a um serviço de Machine Learning desenvolvido em Python, capaz de detectar anomalias comportamentais e prever possíveis eventos ambientais de risco.
+- Inteligência Artificial
+- Visão Computacional
+- Sensores Ambientais
+- ESP32
+- Banco PostgreSQL Cloud
+- APIs Satelitais
+- Aplicativo Mobile
 
-Todas as análises são armazenadas em SQL Server, permitindo rastreabilidade, auditoria e histórico completo das ocorrências.
+Além da análise dos sensores, o sistema monitora alterações comportamentais em canários, permitindo identificar possíveis ameaças ambientais em estágio inicial.
 
----
-
-# ⭐ Diferenciais
-
-- Arquitetura baseada em SOA (Service Oriented Architecture)
-- Comunicação entre microsserviços via REST
-- Machine Learning para detecção de anomalias
-- Persistência de histórico para auditoria
-- Repository Pattern
-- Injeção de Dependência
-- DTOs para desacoplamento
-- Tratamento centralizado de exceções
-- Aplicação dos pilares da POO
-- Integração ASP.NET Core + Python
-
-# 🏛️ Aplicação dos Conceitos de SOA
-
-O projeto foi desenvolvido seguindo os princípios da Arquitetura Orientada a Serviços (SOA), permitindo a separação de responsabilidades entre os componentes da solução.
-
-## Serviços Identificados
-
-| Serviço | Responsabilidade |
-|----------|----------------|
-| Telemetry API | Receber dados de telemetria |
-| Telemetry Service | Processar regras de negócio |
-| Machine Learning API | Realizar análises preditivas |
-| Persistence Layer | Armazenar históricos e resultados |
-
-## Benefícios Obtidos
-
-- Baixo acoplamento
-- Facilidade de manutenção
-- Escalabilidade
-- Reutilização de serviços
-- Independência tecnológica
+Essas informações são processadas por algoritmos inteligentes que classificam o nível de risco e geram alertas preventivos.
 
 ---
 
@@ -89,35 +64,40 @@ O projeto foi desenvolvido seguindo os princípios da Arquitetura Orientada a Se
 
 | Objetivo | Descrição |
 |-----------|-----------|
-| 🛰️ Monitoramento | Receber dados de telemetria em tempo real |
-| 🤖 Inteligência Artificial | Detectar comportamentos anômalos |
-| 🚨 Alertas Preventivos | Antecipar eventos ambientais críticos |
-| 📊 Histórico | Armazenar análises para pesquisas futuras |
-| 🌎 Sustentabilidade | Apoiar ações de preservação da biodiversidade |
+| 🌱 Monitoramento Ambiental | Coletar dados ambientais continuamente |
+| 🤖 Inteligência Artificial | Detectar padrões e anomalias |
+| 🚨 Alertas Preventivos | Antecipar riscos ambientais |
+| 🛰️ Integração Espacial | Utilizar informações provenientes de satélites |
+| 🔐 Segurança Digital | Garantir integridade e disponibilidade dos dados |
 
 ---
 
 # 🏗️ Arquitetura da Solução
 
 ```mermaid
-flowchart LR
+flowchart TD
 
-A[Biotelemetry Tag]
---> B[LEO Satellite]
+A[ESP32 + Sensores Ambientais]
 
-B --> C[ASP.NET Core API]
+B[Câmeras para Monitoramento dos Canários]
 
-C --> D[Telemetry Prediction Service]
+A --> C[API ODDYSEY ASP.NET]
 
-D --> E[Python ML API]
+B --> C
 
-D --> F[SQL Server]
+D[APIs Satelitais]
 
-E --> D
+D --> C
 
-F --> G[Consumer Applications]
+C --> E[PostgreSQL Cloud]
 
-G --> H[Swagger]
+E --> F[Motor de IA]
+
+F --> G[Avaliação de Risco]
+
+G --> H[ODDYSEY Mirror Mobile]
+
+G --> I[Central de Alertas]
 ```
 
 ---
@@ -127,458 +107,319 @@ G --> H[Swagger]
 ```mermaid
 flowchart TD
 
-A[Biotelemetry Tag]
---> B[LEO Satellite]
+A[Sensores ESP32]
 
-B --> C[Telemetry Controller]
+B[Câmeras]
 
-C --> D[Telemetry Prediction Service]
+A --> C[API ODDYSEY]
 
-D --> E[Python ML API]
+B --> C
 
-E --> F{Anomalia Detectada?}
+C --> D[PostgreSQL]
+
+D --> E[IA Analisa Comportamento]
+
+E --> F{Risco Detectado?}
 
 F -->|Sim| G[Gerar Alerta]
 
-F -->|Não| H[Registrar Normalidade]
+F -->|Não| H[Registrar Monitoramento]
 
-G --> I[Salvar Histórico]
+G --> I[Aplicativo Mobile]
 
 H --> I
-
-I --> J[Disponibilizar via REST API]
 ```
 
 ---
 
-# 🔁 Sequência de Comunicação
+# 🛡️ Metodologia de Análise de Riscos
 
-```mermaid
-sequenceDiagram
+Foi utilizada a metodologia STRIDE Simplificada, amplamente empregada na análise de ameaças em sistemas distribuídos, aplicações web, IoT e ambientes em nuvem.
 
-participant Tag
-participant Satellite
-participant API
-participant Service
-participant Python
-participant Database
+## Categorias Utilizadas
 
-Tag->>Satellite: Dados de Telemetria
-
-Satellite->>API: Dados coletados
-
-API->>Service: Solicitação de análise
-
-Service->>Python: POST /predict
-
-Python-->>Service: Resultado
-
-Service->>Database: Salvar histórico
-
-Database-->>Service: Confirmação
-
-Service-->>API: Retorno
-
-API-->>Satellite: Resposta
-```
+| Categoria | Descrição |
+|------------|------------|
+| Spoofing | Falsificação de identidade |
+| Tampering | Alteração indevida de dados |
+| Repudiation | Negação de ações |
+| Information Disclosure | Vazamento de informações |
+| Denial of Service | Indisponibilidade |
+| Elevation of Privilege | Escalação de privilégios |
 
 ---
 
-# 🧩 Diagrama de Classes
+# ⚠️ Ativos Críticos, Ameaças e Impactos
 
-```mermaid
-classDiagram
-
-class SpaceEquipment {
-    <<abstract>>
-    +Id
-    +Name
-    +TransmitDiagnostic()
-}
-
-class Satellite {
-    +OrbitType
-    +AltitudeKm
-}
-
-class BiotelemetryTag {
-    +SpeciesId
-    +HeartRate
-    +Acceleration
-}
-
-class PredictionHistory {
-    +SpeciesId
-    +Probability
-    +AlertLevel
-    +AnalysisDate
-}
-
-SpaceEquipment <|-- Satellite
-SpaceEquipment <|-- BiotelemetryTag
-
-class ITelemetryPredictionService
-
-class TelemetryPredictionService
-
-class IGenericRepository~T~
-
-class GenericRepository~T~
-
-ITelemetryPredictionService <|.. TelemetryPredictionService
-IGenericRepository <|.. GenericRepository
-```
+| Ativo | Ameaça | Categoria STRIDE | Impacto |
+|---------|---------|---------|---------|
+| API de Telemetria | Dados falsificados | Spoofing | Alertas incorretos |
+| PostgreSQL | Alteração de registros | Tampering | Decisões equivocadas |
+| PostgreSQL | Vazamento de dados | Information Disclosure | Exposição de informações |
+| ESP32 | Interceptação da comunicação | Information Disclosure | Captura de dados |
+| Aplicativo Mobile | Acesso indevido | Elevation of Privilege | Uso não autorizado |
+| API Backend | Ataque DDoS | Denial of Service | Sistema indisponível |
+| PostgreSQL | Exclusão de registros | Tampering | Perda de histórico |
+| APIs Satelitais | Indisponibilidade | Denial of Service | Redução da análise |
 
 ---
 
-# 🛠 Stack Tecnológica
+# 🔒 Controles de Segurança Implementados
 
-| Camada | Tecnologia |
-|----------|------------|
-| Backend | ASP.NET Core 8 |
-| Linguagem Principal | C# |
-| Machine Learning | Python |
-| Framework IA | FastAPI |
-| Banco de Dados | SQL Server |
-| ORM | Entity Framework Core |
-| Documentação | Swagger |
-| Arquitetura | SOA |
-| Padrões | Repository Pattern, DTO, Dependency Injection |
+## 1. HTTPS/TLS
 
----
+### Aplicação
 
-# 🚀 Tecnologias Utilizadas
-
-### Backend
-
-- ASP.NET Core 8
-- C#
-- Swagger/OpenAPI
-
-### Banco de Dados
-
-- SQL Server
-- Entity Framework Core
-
-### Inteligência Artificial
-
-- Python
-- FastAPI
-- Modelo de Machine Learning para análise preditiva
-
----
-
-# 🧠 Conceitos de POO Aplicados
-
-## Encapsulamento
-
-Os atributos das entidades são protegidos e acessados através de propriedades e DTOs.
-
-## Herança
-
-A classe abstrata `SpaceEquipment` é utilizada como base para `Satellite` e `BiotelemetryTag`.
-
-## Polimorfismo
-
-O método `TransmitDiagnostic()` possui comportamentos distintos para cada equipamento.
-
-## Abstração
-
-A classe base define comportamentos comuns enquanto as subclasses implementam suas particularidades.
-
----
-
-# 📐 Princípios SOLID Aplicados
-
-### Single Responsibility Principle (SRP)
-
-Cada classe possui uma única responsabilidade dentro da aplicação.
-
-### Open Closed Principle (OCP)
-
-Os serviços podem ser estendidos sem necessidade de modificar implementações existentes.
-
-### Liskov Substitution Principle (LSP)
-
-As implementações respeitam os contratos definidos pelas interfaces.
-
-### Interface Segregation Principle (ISP)
-
-Interfaces específicas evitam dependências desnecessárias.
-
-### Dependency Inversion Principle (DIP)
-
-A aplicação depende de abstrações através de interfaces e injeção de dependência.
-
----
-
-# 🔌 Interfaces
-
-### IGenericRepository<T>
-
-Responsável pelas operações genéricas de persistência.
-
-### ITelemetryPredictionService
-
-Responsável pela comunicação com o serviço de Machine Learning e gerenciamento das análises.
-
----
-
-# 💉 Injeção de Dependência
-
-```csharp
-builder.Services.AddScoped(
-    typeof(IGenericRepository<>),
-    typeof(GenericRepository<>)
-);
-
-builder.Services.AddScoped<
-    ITelemetryPredictionService,
-    TelemetryPredictionService
->();
-
-builder.Services.AddHttpClient();
-```
-
----
-
-# 📦 DTOs
-
-
-| DTO | Tipo |
-|---------|---------|
-| TelemetryDTO | Request |
-| SatelliteDTO | Request |
-| BiotelemetryTagDTO | Request |
-| SpaceEquipmentDTO | Request/Response |
-| PredictionResponseDTO | Response |
-
----
-
-# 🔄 AutoMapper
-
-A aplicação utiliza AutoMapper para realizar o mapeamento entre DTOs e entidades de domínio.
-
-### Perfil Configurado
-
-- TelemetryProfile
+- ESP32 → API
+- Mobile → API
+- API → Serviços Externos
 
 ### Benefícios
 
-- Redução de código repetitivo
-- Conversão automática entre objetos
-- Maior organização das camadas da aplicação
-- Melhor manutenção do código
+- Criptografia dos dados
+- Proteção contra interceptação
+- Mitigação de ataques Man-in-the-Middle
 
 ---
 
-# 🗄️ Estrutura do Banco de Dados
+## 2. Autenticação JWT
 
-## PredictionHistory
+### Aplicação
 
-Tabela responsável por armazenar todas as análises realizadas pelo sistema.
+- Backend ASP.NET
 
-| Campo | Descrição |
-|---------|---------|
-| Id | Identificador |
-| SpeciesId | Espécie monitorada |
-| Latitude | Coordenada geográfica |
-| Longitude | Coordenada geográfica |
-| Probability | Probabilidade da anomalia |
-| AlertLevel | Nível do alerta |
-| AnalysisDate | Data da análise |
+### Benefícios
 
-## SpaceEquipment
-
-Tabela base utilizada para representar os equipamentos monitorados.
-
-### Tipos derivados
-
-- Satellite
-- BiotelemetryTag
-
-Estratégia utilizada:
-
-- TPH (Table Per Hierarchy)
-
-## PredictionHistory
-
-Armazena:
-
-- Espécie monitorada
-- Coordenadas geográficas
-- Frequência cardíaca
-- Aceleração
-- Probabilidade da anomalia
-- Tipo de alerta
-- Data da análise
-
-## SpaceEquipment
-
-Tabela base contendo:
-
-- Satellite
-- BiotelemetryTag
-
-Utilizando estratégia TPH (Table Per Hierarchy).
+- Controle de acesso
+- Identificação de usuários
+- Rastreabilidade
 
 ---
 
-# ✔️ Validação de Dados
+## 3. Backup Automatizado
 
-Antes do processamento das análises, a aplicação realiza validações dos dados recebidos.
+### Aplicação
 
-### Validações Aplicadas
+- PostgreSQL Cloud
 
-- Campos obrigatórios
-- Coordenadas geográficas válidas
-- Identificação da espécie
-- Dados numéricos consistentes
-- Estrutura correta dos DTOs
+### Benefícios
 
-Essas validações garantem maior confiabilidade e integridade das informações processadas.
+- Recuperação de dados
+- Continuidade operacional
+- Proteção contra perda de informações
 
-# 🛡️ Tratamento de Exceções
+---
 
-A exceção customizada:
+## 4. Logs de Auditoria
 
-```csharp
-SpaceTelemetryException
+### Aplicação
+
+- API ODDYSEY
+
+### Benefícios
+
+- Monitoramento
+- Auditoria
+- Investigação de incidentes
+
+---
+
+# 🔐 Arquitetura de Segurança
+
+```mermaid
+flowchart TD
+
+A[ESP32 + Sensores]
+
+B[APIs Ambientais]
+
+A -->|HTTPS/TLS| C[API ODDYSEY]
+
+B -->|HTTPS/TLS| C
+
+C --> D[JWT Authentication]
+
+D --> E[Logs de Auditoria]
+
+E --> F[PostgreSQL Cloud]
+
+F --> G[Backup Automatizado]
+
+C --> H[ODDYSEY Mirror Mobile]
 ```
 
-centraliza erros relacionados a:
-
-- Comunicação com API Python
-- Falhas de processamento
-- Erros de integração
-- Exceções não tratadas
-
 ---
 
-# 🔗 Endpoints
+# 💻 Implementação Prática
 
-## POST /api/telemetry/predict
+A implementação prática escolhida foi o monitoramento através de logs utilizando o sistema nativo do ASP.NET Core.
 
-Recebe dados de telemetria e retorna uma análise preditiva.
+## Exemplo
 
-### Exemplo
-
-```json
+```csharp
+[HttpPost]
+public IActionResult ReceberTelemetria(TelemetriaDTO dto)
 {
-  "speciesId": "ANIMAL-001",
-  "latitude": -23.5505,
-  "longitude": -46.6333,
-  "acceleration": 8.5,
-  "heartRate": 120
+    _logger.LogInformation(
+        "Nova telemetria recebida do sensor {SensorId}",
+        dto.SensorId
+    );
+
+    return Ok();
 }
 ```
 
 ---
 
-## GET /api/telemetry/predictions
+# 📋 Evidências
 
-Retorna o histórico completo de análises realizadas.
+As evidências utilizadas para validação da implementação encontram-se na pasta:
+
+```text
+/evidencias
+```
+
+## Evidência 1
+
+Código implementado no Controller.
+
+Arquivo:
+
+```text
+codigo/TelemetriaController.cs
+```
+
+## Evidência 2
+
+API em execução.
+
+Print esperado:
+
+```text
+Terminal executando o ASP.NET Core.
+```
+
+## Evidência 3
+
+Logs registrados.
+
+Exemplo:
+
+```text
+info: Nova telemetria recebida do sensor ESP32-001
+
+info: Nova telemetria recebida do sensor ESP32-002
+```
+
+## Evidência 4
+
+Teste realizado via Postman.
+
+Resultado:
+
+```text
+HTTP 200 OK
+```
 
 ---
 
 # 📂 Estrutura do Projeto
 
 ```text
-📦 SpaceTelemetry
-├── 📂 Controllers
-├── 📂 Services
-├── 📂 Repositories
-├── 📂 Interfaces
-├── 📂 Models
-├── 📂 DTOs
-├── 📂 Data
-├── 📂 Profiles
-├── 📂 Exceptions
-├── 📂 Migrations
-└── 📂 Configurations
+GS-Cybersecurity-Odyssey
+
+├── README.md
+
+├── evidencias
+│   ├── log-api.png
+│   ├── terminal-log.png
+│   ├── postman-request.png
+
+├── codigo
+│   └── TelemetriaController.cs
+
+└── documento
+    └── GS_Cybersecurity_ODDYSEY.pdf
 ```
 
 ---
 
 # ▶️ Como Executar
 
-## 1. Clonar o projeto
+## Restaurar Dependências
 
 ```bash
-git clone URL_DO_REPOSITORIO
+dotnet restore
 ```
 
-```bash
-cd SpaceTelemetry
-```
-
-## 2. Aplicar migrations
-
-```bash
-dotnet ef database update
-```
-
-## 3. Executar aplicação
+## Executar Projeto
 
 ```bash
 dotnet run
 ```
 
-## 4. Acessar Swagger
+## Acessar Swagger
 
 ```text
-https://localhost:[porta]/swagger
+https://localhost:porta/swagger
 ```
 
-> Certifique-se de que o serviço Python esteja em execução antes de utilizar o endpoint `/predict`.
+---
+
+# 🌎 Contribuição para os ODS
+
+## ODS 3 — Saúde e Bem-Estar
+
+Detecção preventiva de riscos ambientais que possam impactar a população.
+
+## ODS 11 — Cidades e Comunidades Sustentáveis
+
+Melhoria da resposta a incidentes ambientais.
+
+## ODS 13 — Ação Contra a Mudança Global do Clima
+
+Monitoramento de queimadas e alterações ambientais.
+
+## ODS 15 — Vida Terrestre
+
+Proteção dos ecossistemas através da identificação precoce de ameaças.
 
 ---
 
-# 📸 Evidências
+# 🛰️ Relação com o Ecossistema Espacial
 
-Adicionar capturas de tela de:
+A arquitetura do ODDYSEY foi concebida considerando futuras aplicações em:
 
-- Swagger funcionando
-- Endpoint POST testado
-- Histórico retornado pelo GET
-- Banco populado
-- Comunicação com API Python
+- Bases Lunares
+- Habitats Espaciais
+- Missões de Longa Duração
+- Sistemas de Suporte à Vida
+
+Em ambientes espaciais, falhas ambientais podem comprometer diretamente a sobrevivência humana.
+
+Os controles de segurança implementados garantem:
+
+- Integridade dos dados ambientais
+- Disponibilidade dos sistemas críticos
+- Rastreabilidade dos eventos
+- Proteção contra acessos indevidos
 
 ---
-
-# 🎥 Demonstração
-
-<p align="center">
-  <a href="https://youtu.be/5G9euYeWuxI" target="_blank">
-    <img src="https://img.youtube.com/vi/5G9euYeWuxI/maxresdefault.jpg" alt="Vídeo Demonstração Space Telemetry" width="800">
-  </a>
-</p>
-
-<p align="center">
-  ▶️ Clique na imagem para assistir à demonstração completa do projeto
-</p>
 
 # 🚀 Evoluções Futuras
 
+- [ ] Machine Learning avançado para previsão de eventos ambientais
 - [ ] Dashboard Web
 - [ ] Notificações em tempo real
-- [ ] Aplicativo Mobile
-- [ ] Treinamento contínuo dos modelos
-- [ ] Integração com novos sensores
-- [ ] Painel de monitoramento geográfico
-
----
-
-# 🌎 Impacto Ambiental
-
-O Space Telemetry demonstra como tecnologias espaciais, inteligência artificial e sistemas distribuídos podem ser utilizadas para auxiliar a preservação da biodiversidade.
-
-A solução permite monitoramento contínuo, identificação precoce de riscos ambientais e suporte à tomada de decisão por pesquisadores e órgãos ambientais.
+- [ ] Integração com novos sensores IoT
+- [ ] Monitoramento geoespacial avançado
+- [ ] Integração com satélites de baixa órbita
 
 ---
 
 <p align="center">
 
-<b>FIAP • Global Solution 2026 • Engenharia de Software</b>
+<b>FIAP • Global Solution 2026 • Engenharia de Software • Cibersegurança</b>
 
 </p>
+````
