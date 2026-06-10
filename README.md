@@ -28,14 +28,15 @@ Sistema desenvolvido para detecção preventiva de riscos ambientais utilizando 
 
 ---
 
-# 👥 Integrantes
+# Integrantes
 
-| Nome | RM |
-|--------|--------|
-| Nome Integrante | RMXXXXX |
-| Nome Integrante | RMXXXXX |
-| Nome Integrante | RMXXXXX |
-| Nome Integrante | RMXXXXX |
+| Nome                               | RM       |
+| ---------------------------------- | -------- |
+| Ana Laura Torres Loureiro          | RM554375 |
+| Murilo Cordeiro Ferreira           | RM556727 |
+| Geronimo Augusto Nascimento Santos | RM557170 |
+| Ianny Raquel Ferreira De Souza     | RM559096 |
+
 
 ---
 
@@ -421,4 +422,3 @@ Os controles de segurança implementados garantem:
 <b>FIAP • Global Solution 2026 • Engenharia de Software • Cibersegurança</b>
 
 </p>
-````
