@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/SEU-USUARIO/SEU-REPOSITORIO/main/banner-oddysey.png"/>
+<img src="https://raw.githubusercontent.com/AnaTorresLoureiro/legendary-doodle/refs/heads/main/Design%20sem%20nome%20(1).png"/>
 
 <p align="center">
 
